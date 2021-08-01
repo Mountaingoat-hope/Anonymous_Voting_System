@@ -1,0 +1,31 @@
+<html>
+   <head> 
+    <title>Voting website</title>
+    </head>
+   <body>
+     <h1>Voting lists</h1>
+     <p>Following are the list of pools available</p>
+     <form method="post" action="/select">
+      <label for="itr">Position</label>
+      <input name=position" type="number" id="itr" required />
+      <br/>
+      <label>Select from following</label><br/>
+      <label for="Land">Land</label> 
+      <input name="Types" type="radio" id="Land" value="lnd" required/>
+      <label for="Waterb">Water bodies</label>
+      <input name="Types" type="radio" id="Waterb" value="wb" required/>
+      
+      <input type="submit" value="Compute">
+      </form>
+      
+     <p> The world with land is suurounded by water occupying about two thirds of the whole region.</p>
+     <hr/>
+
+     {% block body %}
+     {% endblock %}
+     </body>
+    </html>
+
+
+
+
