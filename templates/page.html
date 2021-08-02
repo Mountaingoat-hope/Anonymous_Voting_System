@@ -1,13 +1,14 @@
-{% extends base.html %}
+{% extends "base.html" %}
 {% block votelist %}
-
+{% for i in user_votelist %}
 <div>
-   <h2>Classroom rep</h2>
+   <h2>{{i[0]|e}}</h2>
    <p>
-   The following voting is to select the classroom representative in the class
+   {{i[1]|e}}
    </p>
   <p>
-  The results will be declared after 2 days. 
+  The results will be declared after {{i[2]|e}} days. 
   </p>
   </div>
+{% endfor %}
 {% endblock %}
